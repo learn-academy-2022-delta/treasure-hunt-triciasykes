@@ -9,7 +9,12 @@ class App extends Component {
     }
   }
   handleGamePlay = (index) => {
-    alert(index)
+    // alert(index)
+    // destructure state so that we can access an instance of board
+    const { board } = this.state
+    // set selected board item (found by index) to emoji
+    board[index] = "🌴"
+    this.setState({ board: board})
   }
 
   render() {
